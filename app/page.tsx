@@ -14,7 +14,7 @@ export default function Home() {
   return (
     <main className="flex justify-center w-screen py-24 h-screen" onClick={() => textareaRef.current?.focus()}>
       <div className='after:whitespace-pre-wrap grid w-1/2 pb-24'>
-        <ReactTextareaAutosize className='outline-none bg-transparent resize-none' ref={textareaRef} value={content} onChange={(e) => {
+        <ReactTextareaAutosize className='outline-none bg-transparent resize-none' ref={textareaRef} value={content} placeholder='Click here to start writing...' onChange={(e) => {
           setContent(e.target.value)
           localStorage.setItem("content", e.target.value)
         }} />
