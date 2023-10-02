@@ -9,9 +9,10 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "next": "latest",
     "react": "latest",
     "react-dom": "latest",
-    "next": "latest"
+    "react-textarea-autosize": "^8.5.3"
   },
   "devDependencies": {
     "typescript": "latest",
