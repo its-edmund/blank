@@ -4,8 +4,12 @@ import { useRef, useState } from 'react'
 import ReactTextareaAutosize from 'react-textarea-autosize'
 
 export default function Home() {
+  if (typeof window !== 'undefined') {
+    // Perform localStorage action
+    const item = localStorage.getItem('key')
+  }
   const textareaRef = useRef<HTMLTextAreaElement>(null)
-  const [content, setContent] = useState(localStorage.getItem("content") || "")
+  const [content, setContent] = useState(typeof window !== "undefined" ? localStorage.getItem("content") || "" : "")
 
   return (
     <main className="flex justify-center w-screen py-24 h-screen" onClick={() => textareaRef.current?.focus()}>
